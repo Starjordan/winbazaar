@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Win Bazaar - Download</title>
+<style>
+:root{--bg:#0b0e14;--card:#151a24;--tx:#f3f4f6;--mu:#9ca3af;--gold:#f59e0b;--green:#22c55e}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:grid;place-items:center;padding:20px;background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif}
+.wrap{width:100%;max-width:420px}
+h1{text-align:center;margin:0 0 6px;font-size:24px;color:var(--gold)}
+p.sub{text-align:center;margin:0 0 22px;color:var(--mu);font-size:14px}
+.card{background:var(--card);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:16px;margin-bottom:14px}
+.card h2{margin:0 0 4px;font-size:17px}
+.card p{margin:0 0 12px;font-size:13px;color:var(--mu);line-height:1.4}
+a.btn{display:block;text-align:center;text-decoration:none;font-weight:800;font-size:15px;padding:13px;border-radius:12px}
+.lite a.btn{background:var(--gold);color:#1a1204}
+.heavy a.btn{background:var(--green);color:#062b12}
+small{display:block;text-align:center;color:var(--mu);font-size:12px;margin-top:8px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Win Bazaar</h1>
+  <p class="sub">Apna version chuniye aur download kijiye</p>
+
+  <div class="card lite">
+    <h2>Lite Version</h2>
+    <p>Halka aur fast. Kam storage aur kam data mein chalta hai.</p>
+    <a class="btn" id="lite" href="#">Download Lite</a>
+  </div>
+
+  <div class="card heavy">
+    <h2>Heavy Version</h2>
+    <p>Zyada features aur behtar performance.</p>
+    <a class="btn" id="heavy" href="#">Download Heavy</a>
+  </div>
+
+  <small>Download ke baad APK kholkar install kijiye.</small>
+</div>
+
+<script>
+// ====== SIRF YE 4 LINES BADALNI HAIN ======
+var USER  = "USERNAME";            // GitHub username
+var REPO  = "REPO";                // repository ka naam
+var LITE  = "WinBazaar_Lite.apk";  // Release mein Lite file ka naam
+var HEAVY = "WinBazaar_Heavy.apk"; // Release mein Heavy file ka naam
+// ==========================================
+
+var base = "https://github.com/" + USER + "/" + REPO + "/releases/latest/download/";
+document.getElementById("lite").href = base + LITE;
+document.getElementById("heavy").href = base + HEAVY;
+</script>
+</body>
+</html>
